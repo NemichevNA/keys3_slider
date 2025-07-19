@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Красивый слайдер изображений</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="slider-container">
+        <h1 class="slider-title">Галерея изображений</h1>
+        
+        <div class="slider-wrapper">
+            <div class="slider">
+                <div class="slide active">
+                    <img src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Красивый закат">
+                    <div class="slide-content">
+                        <h3>Магический закат</h3>
+                        <p>Невероятные краски природы на горизонте</p>
+                    </div>
+                </div>
+                
+                <div class="slide">
+                    <img src="https://images.pexels.com/photos/1366919/pexels-photo-1366919.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Горы и озеро">
+                    <div class="slide-content">
+                        <h3>Горное озеро</h3>
+                        <p>Кристально чистые воды в объятиях гор</p>
+                    </div>
+                </div>
+                
+                <div class="slide">
+                    <img src="https://images.pexels.com/photos/1519088/pexels-photo-1519088.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Лесная тропа">
+                    <div class="slide-content">
+                        <h3>Лесная дорога</h3>
+                        <p>Путь сквозь таинственный лес</p>
+                    </div>
+                </div>
+                
+                <div class="slide">
+                    <img src="https://images.pexels.com/photos/1029604/pexels-photo-1029604.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Океанские волны">
+                    <div class="slide-content">
+                        <h3>Океанские волны</h3>
+                        <p>Бескрайние просторы синего океана</p>
+                    </div>
+                </div>
+                
+                <div class="slide">
+                    <img src="https://images.pexels.com/photos/1323550/pexels-photo-1323550.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Звездное небо">
+                    <div class="slide-content">
+                        <h3>Звездная ночь</h3>
+                        <p>Миллиарды звезд в ночном небе</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Кнопки навигации -->
+            <button class="nav-btn prev-btn" id="prevBtn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            
+            <button class="nav-btn next-btn" id="nextBtn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            
+            <!-- Индикаторы -->
+            <div class="indicators">
+                <span class="indicator active" data-slide="0"></span>
+                <span class="indicator" data-slide="1"></span>
+                <span class="indicator" data-slide="2"></span>
+                <span class="indicator" data-slide="3"></span>
+                <span class="indicator" data-slide="4"></span>
+            </div>
+        </div>
+        
+        <!-- Счетчик изображений -->
+        <div class="image-counter">
+            <span id="currentImage">1</span> из <span id="totalImages">5</span>
+        </div>
+        
+        <!-- Кнопка автопроигрывания -->
+        <button class="autoplay-btn" id="autoplayBtn">
+            <svg class="play-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M8 5V19L19 12L8 5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <svg class="pause-icon hidden" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M6 4H10V20H6V4Z" stroke="currentColor" stroke-width="2"/>
+                <path d="M14 4H18V20H14V4Z" stroke="currentColor" stroke-width="2"/>
+            </svg>
+        </button>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
